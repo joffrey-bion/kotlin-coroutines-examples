@@ -18,7 +18,7 @@ fun main() = runBlocking {
 fun CoroutineScope.startGenerationAsync(): ReceiveChannel<Int> = produce {
     for (i in 0..5) {
         delay(100)
-        channel.send(i * i)
+        send(i * i)
     }
 }
 //sampleEnd
